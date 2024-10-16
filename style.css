@@ -1,0 +1,91 @@
+
+body {
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+    background-color: #ffebf0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Allow scrolling, but prevent horizontal scrolling */
+    position: relative;
+}
+
+header {
+    background-color: #ff869a;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.message {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2; /* Keep message above the hearts */
+}
+
+.message p {
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+
+.message p span {
+    font-size: 1em; /* Makes emoji size proportional to text */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff869a;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed; /* Fix position to viewport */
+    bottom: 0; /* Start from the bottom of the viewport */
+    width: 30px; /* Set width for the heart */
+    height: 30px; /* Set height for the heart */
+    background-color: pink;
+    transform: rotate(45deg);
+    animation: float 7s infinite;
+    opacity: 0.8;
+    z-index: 1; /* Keep hearts behind the content */
+}
+
+/* Create heart shape */
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -15px;
+    left: 0;
+}
+
+.heart::after {
+    left: 15px;
+    top: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(-45deg); /* Start at bottom */
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-1200px) rotate(-45deg); /* Float out of view */
+        opacity: 0;
+    }
+}

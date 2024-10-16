@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Best Friend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>For You, IRU</h1>
+</header>
+
+<div class="message">
+    <p>So finally <span style="font-size: 1.1em;">🥳</span>, I'm writing this letter <span style="font-size: 1.1em;">💌</span> you’ve been waiting for so long! I don’t know what you consider me after reading this — whether it's as a best friend 🫂 or maybe something more, like a lover 💘—but these are the words that I feel wholeheartedly for you ♥️.
+
+        <br><br>I don’t know where to begin, but I do know this: you mean so much to me 🫶. Please, never forget that 🙏. You always say you know everything about me, and that's true 💯. I’ve shared every little thing with you, and I don’t think anyone else in your place could ever understand me even 50% as you do. I’m sorry for not understanding you as deeply as you understand me 😔, but I promise to try harder to get to know you better 🤞.
+        
+        <br><br>I don’t know how you are with others, but I love how you are with me. You can show me your anger 🫣, I can take it, but what I want the most from you is your love 💓. The way you are with me is probably why I’ve fallen in love with you 💗, and I never want you to change how you are with me. You may not realize it, but you’ve given me so much trust—the kind of trust that tells me you’ll never leave me, cheat on me, or disrespect me, and that’s something I can’t find in anyone else. That’s all I need from you: trust, love, and your time 😁.
+        
+        <br><br>Thank you for solving a problem in my family 💕, for always being there. I truly want to spend my life with you 😍, but even if I can only stay by your side as a friend 🥰, I’m happy. I don’t know what the future holds, but I do know this: I will never leave you, and I will never miss out on loving you 😘.
+        
+        <br><br>I’m sorry I don’t have a gift for you this time — I tried, but I failed 😞. Yes, we have our fights, but at the end of the day, all I want is your attention, more than anyone else’s 💫. You love me, care for me, make efforts for me, never stay away from me, even change yourself for me. You give me your time even when you're busy, you understand and comfort me. With everything you do, how could I not fall in love with you?
+        
+        <br><br>I love you, watashino 💝, and I want you to take care of yourself 👀. I could write so much more about you, but you’d probably get bored since you already know how amazing you are. So, I’ll stop here. Just know, I love you the most—and maybe hate you the most sometimes when I’m mad—but everything, all my emotions are just for you. No one can ever replace you.
+        
+        <br><br>Lastly, thank you 🙌 for coming into my life and for every happiness you’ve brought me. You read books a lot, so how does this beautiful chapter about you in my life sound? It’s just a test chapter, though—the real one is in my heart, and no one will ever know that story.</p>
+
+</div>
+
+<footer>
+    <p>With love</p>
+</footer>
+
+<script>
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        
+        // Random position on the screen
+        heart.style.left = Math.random() * window.innerWidth + 'px';
+        heart.style.animationDuration = Math.random() * 3 + 5 + 's'; // Random animation duration
+        
+        document.body.appendChild(heart);
+
+        // Remove heart after animation ends
+        setTimeout(() => {
+            heart.remove();
+        }, 8000);
+    }
+
+    setInterval(createHeart, 300); // Create new heart every 300ms
+</script>
+
+<!-- JavaScript to generate hearts -->
+<!-- <script>
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        
+        // Random position on the screen
+        heart.style.left = Math.random() * window.innerWidth + 'px';
+        heart.style.animationDuration = Math.random() * 3 + 5 + 's'; // Random animation duration
+        
+        document.body.appendChild(heart);
+
+        // Remove heart after animation ends
+        setTimeout(() => {
+            heart.remove();
+        }, 8000);
+    }
+
+    setInterval(createHeart, 300); // Create new heart every 300ms
+</script> -->
+
+</body>
+</html>
